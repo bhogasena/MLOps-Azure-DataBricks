@@ -116,3 +116,15 @@ with mlflow.start_run() as mlflow_run:
 # COMMAND ----------
 
 
+import datetime
+import ast,sys
+input_str = sys.stdin.read()
+input_list = ast.literal_eval(input_str)
+dateStart=datetime.date(input_list[0],input_list[1],input_list[2])
+dateEnd=datetime.date(input_list[3],input_list[4],input_list[5])
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+ans = set()
+while dateStart <= dateEnd:
+	ans.add(dateStart.month)
+	dateStart += datetime.timedelta(1)
+print([months[x-1] for x in sorted(ans)])

@@ -66,7 +66,7 @@ for run in runs:
 print("Lowest RMSE:", rmse_low)
 print("Run ID:", run_id)
 
-model_uri = "runs:/" + run_id + "/model"
+model_uri = "runs:/" + run_id+ "/model"
 
 # COMMAND ----------
 

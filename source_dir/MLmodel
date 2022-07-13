@@ -1,0 +1,16 @@
+artifact_path: tensorflow-model
+databricks_runtime: 10.4.x-cpu-ml-scala2.12
+flavors:
+  keras:
+    data: data
+    keras_module: tensorflow.keras
+    keras_version: 2.8.0
+    save_format: tf
+  python_function:
+    data: data
+    env: conda.yaml
+    loader_module: mlflow.keras
+    python_version: 3.8.10
+model_uuid: f6865a8036614099a80b3424ffc4a403
+run_id: 6459280d-ee8d-4833-97cc-ece9cf7b3008
+utc_time_created: '2022-07-02 21:44:26.253003'
